@@ -1,11 +1,11 @@
 <template>
-
+    <H1>CHI Siamo</H1>
 </template>
 
 
 <script>
 export default {
-    name: 'AboutComp'
+    name: 'About'
 }
 </script>
 
