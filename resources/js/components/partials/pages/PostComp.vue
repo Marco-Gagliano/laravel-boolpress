@@ -5,7 +5,7 @@
 
 <script>
 export default {
-    name: 'BlogComp'
+    name: 'PostComp'
 }
 </script>
 

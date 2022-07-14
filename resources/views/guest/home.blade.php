@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/front/style.css') }}">
 
-    <title>Document</title>
+    <title>Boolpress</title>
 </head>
 <body>
 
