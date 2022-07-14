@@ -5,6 +5,11 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+import HomeComp from 'resources/js/components/pages/HomeComp';
+import AboutComp from 'resources/js/components/pages/AboutComp';
+import ContactsComp from 'resources/js/components/pages/;ContactsComp'
+import PostComp from 'resources/js/components/pages/PostComp';
+
 const router = newVueRouter({
     mode:'history',
     routes: [
@@ -30,3 +35,5 @@ const router = newVueRouter({
         },
     ]
 })
+
+export default router;
