@@ -24,7 +24,13 @@ export default {
 </script>
 
 <style lang="scss">
+
+
     ul {
         list-style: none;
+    }
+
+    h1 {
+        text-align: center;
     }
 </style>

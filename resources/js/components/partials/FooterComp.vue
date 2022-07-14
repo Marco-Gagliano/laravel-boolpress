@@ -1,8 +1,13 @@
 <template>
+    <footer>
 
-    <div class="container">
-        <h1>TUTTO OK</h1>
-    </div>
+        <div class="container">
+
+            <h1>BOOLPRESS 2022</h1>
+
+        </div>
+
+    </footer>
 </template>
 
 
@@ -15,9 +20,11 @@ export default {
 
 <style lang="scss" scoped>
 
-    .container {
+    footer {
+        height: 40px;
         background-color: #5F5F5F;
     }
+
 
     h1 {
         color: #FFFFFF;

@@ -1,29 +1,30 @@
 <template>
-    <div class="container">
+    <header>
+        <div class="container">
 
-        <div class="d-flex">
+            <div class="d-flex">
 
-            <ul class="text-center">
-                <li>
-                    <router-link :to="{name: 'home'}">Home</router-link>
-                </li>
+                <ul class="text-center">
+                    <li>
+                        <router-link :to="{name: 'home'}">Home</router-link>
+                    </li>
 
-                <li>
-                    <router-link :to="{name: 'post'}">Post</router-link>
-                </li>
+                    <li>
+                        <router-link :to="{name: 'post'}">Post</router-link>
+                    </li>
 
-                <li>
-                    <router-link :to="{name: 'about'}">Chi Siamo</router-link>
-                </li>
-                <li>
-                    <router-link :to="{name: 'contacts'}">Contatti</router-link>
-                </li>
-            </ul>
+                    <li>
+                        <router-link :to="{name: 'about'}">Chi Siamo</router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{name: 'contacts'}">Contatti</router-link>
+                    </li>
+                </ul>
+
+            </div>
 
         </div>
-
-
-    </div>
+    </header>
 </template>
 
 
@@ -36,8 +37,8 @@ export default {
 
 <style lang="scss" scoped>
 
-
-    .container {
+    header {
+        height: 120px;
         background-color: #000000;
     }
 

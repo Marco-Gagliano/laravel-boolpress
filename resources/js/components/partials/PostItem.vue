@@ -28,4 +28,16 @@ export default {
 
 <style lang="scss" scoped>
 
+    h3 {
+    color:#008000;
+    }
+
+    span {
+    color: #000000;
+    }
+
+    li {
+    padding: 0 10px;
+    border-bottom: 2px solid black;
+    }
 </style>
