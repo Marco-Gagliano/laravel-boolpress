@@ -2085,6 +2085,15 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     shortDescription: function shortDescription() {
       return this.post.description.substr(0, 65) + '...';
+    },
+    formatDate: function formatDate() {
+      var d = new Date(this.post.updated_at);
+      var day = d.getDate();
+      var month = d.getMonth() + 1;
+      var year = d.getFullYear();
+      if (day < 10) day = '0' + day;
+      if (month < 10) day = '0' + month;
+      return "".concat(day, "/").concat(month, "/").concat(year);
     }
   }
 });
@@ -2685,7 +2694,7 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "container"
-  }, [_c("ul", [_c("li", [_c("h3", [_vm._v("Titolo: "), _c("span", [_vm._v(_vm._s(_vm.post.title))])]), _vm._v(" "), _c("h3", [_vm._v("Descrizione: "), _c("span", [_vm._v(_vm._s(_vm.shortDescription))])]), _vm._v(" "), _c("p", [_vm._v(_vm._s())])])])]);
+  }, [_c("ul", [_c("li", [_c("h3", [_vm._v("Titolo: "), _c("span", [_vm._v(_vm._s(_vm.post.title))])]), _vm._v(" "), _c("h3", [_vm._v("Descrizione: "), _c("span", [_vm._v(_vm._s(_vm.shortDescription))])]), _vm._v(" "), _c("h5", [_vm._v("Caricato il: "), _c("span", [_vm._v(_vm._s(_vm.formatDate))])])])])]);
 };
 
 var staticRenderFns = [];
@@ -7168,7 +7177,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "h3[data-v-49c43f95] {\n  color: #008000;\n}\nspan[data-v-49c43f95] {\n  color: #000000;\n}\nli[data-v-49c43f95] {\n  padding: 0 10px;\n  border-bottom: 2px solid black;\n}", ""]);
+exports.push([module.i, "h3[data-v-49c43f95] {\n  color: #008000;\n}\nh5[data-v-49c43f95] {\n  color: #FA0000;\n}\nspan[data-v-49c43f95] {\n  color: #000000;\n}\nli[data-v-49c43f95] {\n  padding: 0 10px;\n  border-bottom: 2px solid black;\n}", ""]);
 
 // exports
 
