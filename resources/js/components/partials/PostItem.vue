@@ -4,7 +4,9 @@
 
         <ul>
             <li>
-                <h3>Titolo: <span>{{ post.title }}</span></h3>
+                <h3>Titolo:
+                    <router-link :to="{name: 'detail', params:{slug: post.slug}}">{{ post.title }}</router-link>
+                </h3>
                 <h3>Descrizione: <span>{{ shortDescription }}</span></h3>
                 <h5>Caricato il: <span>{{ formatDate }}</span></h5>
             </li>
@@ -36,7 +38,7 @@ export default {
             let month = d.getMonth() + 1;
             const year = d.getFullYear();
             if(day < 10 ) day = '0' + day;
-            if(month < 10 ) day = '0' + month;
+            if(month < 10 ) month = '0' + month;
 
             return `${day}/${month}/${year}`;
         }
@@ -63,5 +65,14 @@ export default {
     li {
     padding: 0 10px;
     border-bottom: 2px solid black;
+    }
+
+    a {
+        color: #130080;
+        text-decoration: none;
+
+        &:hover {
+            color: #2600FF;
+        }
     }
 </style>

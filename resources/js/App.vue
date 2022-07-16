@@ -25,6 +25,9 @@ export default {
 
 <style lang="scss">
 
+    body {
+        margin: 0;
+    }
 
     ul {
         list-style: none;

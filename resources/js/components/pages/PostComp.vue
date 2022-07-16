@@ -30,6 +30,7 @@
 
 import PostItem from '../partials/PostItem.vue';
 import LoaderComp from '../partials/LoaderComp.vue'
+import { apiUrl } from '../../data/config';
 
 
 export default {
@@ -41,7 +42,7 @@ export default {
                 current: null,
                 last: null
             },
-            apiUrl: "/api/posts",
+            apiUrl,
             posts: null
         };
     },
