@@ -2081,6 +2081,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     post: Object
+  },
+  computed: {
+    shortDescription: function shortDescription() {
+      return this.post.description.substr(0, 65) + '...';
+    }
   }
 });
 
@@ -2680,7 +2685,7 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "container"
-  }, [_c("ul", [_c("li", [_c("h3", [_vm._v("Titolo: "), _c("span", [_vm._v(_vm._s(_vm.post.title))])]), _vm._v(" "), _c("h3", [_vm._v("Descrizione: "), _c("span", [_vm._v(_vm._s(_vm.post.description))])])])])]);
+  }, [_c("ul", [_c("li", [_c("h3", [_vm._v("Titolo: "), _c("span", [_vm._v(_vm._s(_vm.post.title))])]), _vm._v(" "), _c("h3", [_vm._v("Descrizione: "), _c("span", [_vm._v(_vm._s(_vm.shortDescription))])]), _vm._v(" "), _c("p", [_vm._v(_vm._s())])])])]);
 };
 
 var staticRenderFns = [];

@@ -5,7 +5,8 @@
         <ul>
             <li>
                 <h3>Titolo: <span>{{ post.title }}</span></h3>
-                <h3>Descrizione: <span>{{ post.description }}</span></h3>
+                <h3>Descrizione: <span>{{ shortDescription }}</span></h3>
+                <p>{{ }}</p>
             </li>
         </ul>
 
@@ -21,8 +22,15 @@ export default {
     components: { PostComp },
     props: {
         post: Object
+    },
+
+    computed:{
+        shortDescription(){
+            return this.post.description.substr(0,65 ) + '...';
+        }
     }
 }
+
 </script>
 
 
