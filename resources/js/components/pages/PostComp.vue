@@ -2,19 +2,24 @@
 
     <div class="container">
 
-        <PostItem v-for="post in posts" :key="post.id" :post="post"/>
+        <LoaderComp v-if="!posts" />
 
-        <div class="buttons">
+        <div class="post-list" v-else>
 
-            <button @click="getApi(pagination.current -1)" :disabled="pagination.current === 1">PREC</button>
+            <PostItem v-for="post in posts" :key="post.id" :post="post"/>
 
-            <button v-for="i in pagination.last"
-                    :key="i" @click="getApi(i)"
-                    :disabled="pagination.current === i">{{ i }}
-            </button>
+            <div class="buttons">
 
-            <button @click="getApi(pagination.current +1)" :disabled="pagination.current === pagination.last">SUCC</button>
+                <button @click="getApi(pagination.current -1)" :disabled="pagination.current === 1">PREC</button>
 
+                <button v-for="i in pagination.last"
+                        :key="i" @click="getApi(i)"
+                        :disabled="pagination.current === i">{{ i }}
+                </button>
+
+                <button @click="getApi(pagination.current +1)" :disabled="pagination.current === pagination.last">SUCC</button>
+
+            </div>
         </div>
     </div>
 
@@ -22,10 +27,14 @@
 
 
 <script>
+
 import PostItem from '../partials/PostItem.vue';
+import LoaderComp from '../partials/LoaderComp.vue'
+
+
 export default {
     name: "Post",
-    components: { PostItem },
+    components: { PostItem, LoaderComp },
     data() {
         return {
             pagination: {
@@ -38,6 +47,7 @@ export default {
     },
     methods: {
         getApi(page) {
+            this.posts = null
             axios.get(this.apiUrl +"?page=" + page)
                 .then(res => {
                 this.posts = res.data.data;
