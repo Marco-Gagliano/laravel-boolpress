@@ -28,7 +28,7 @@ export default {
 
     computed:{
         shortDescription(){
-            return this.post.description.substr(0,65 ) + '...';
+            return this.post.description.substr(0,80 ) + '...';
         },
 
         formatDate(){
@@ -75,4 +75,5 @@ export default {
             color: #2600FF;
         }
     }
+
 </style>
