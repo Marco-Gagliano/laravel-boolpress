@@ -1972,7 +1972,9 @@ __webpack_require__.r(__webpack_exports__);
       //post:null all'inizio è null. Perchè c'e il tempo della chiamati API che all'inizio non c'è, non lo trova e da errore (anche se il dato lo stampa)
       post: {
         title: '',
-        description: ''
+        description: '',
+        category: '',
+        tags: []
       },
       apiUrl: _data_config__WEBPACK_IMPORTED_MODULE_0__["apiUrl"]
     };
@@ -2234,7 +2236,16 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "container"
-  }, [_c("h3", [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.post.description))])]);
+  }, [_c("h3", [_vm._v(_vm._s(_vm.post.title))]), _vm._v(" "), _c("h4", [_vm._v("Categoria: " + _vm._s(_vm.post.category.name))]), _vm._v(" "), _c("div", {
+    staticClass: "tags-container"
+  }, [_c("span", {
+    staticClass: "tag-default"
+  }, [_vm._v("Tags: ")]), _vm._v(" "), _vm._l(_vm.post.tags, function (tag) {
+    return _c("span", {
+      key: tag.id,
+      staticClass: "tags"
+    }, [_vm._v(_vm._s(tag.name))]);
+  })], 2), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.post.description))])]);
 };
 
 var staticRenderFns = [];
@@ -7179,7 +7190,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".container[data-v-df0d9754] {\n  padding-left: 15px;\n}\nh3[data-v-df0d9754] {\n  color: #008000;\n  font-size: 40px;\n}\np[data-v-df0d9754] {\n  color: #000000;\n  font-size: 24px;\n}", ""]);
+exports.push([module.i, ".container[data-v-df0d9754] {\n  padding-left: 15px;\n}\nh3[data-v-df0d9754] {\n  color: #008000;\n  font-size: 40px;\n}\np[data-v-df0d9754] {\n  color: #000000;\n  font-size: 24px;\n}\n.tags[data-v-df0d9754] {\n  margin-right: 15px;\n  background-color: #BE0029;\n  padding: 5px;\n}", ""]);
 
 // exports
 
